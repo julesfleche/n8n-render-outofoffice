@@ -7,6 +7,11 @@ services:
     branch: main # optional (defaults to master)
     numInstances: 1
     healthCheckPath: /healthz
+    dockerfilePath: ./Dockerfile
+    disk:
+      name: n8n-data
+      mountPath: /data
+      sizeGB: 1
     envVars:
       - key: DB_TYPE
         value: postgresdb
